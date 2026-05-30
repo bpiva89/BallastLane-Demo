@@ -1,0 +1,32 @@
+<main class="auth">
+  <section class="auth--card">
+    <h1>Sign In</h1>
+    <p class="auth--subtitle">Product Management</p>
+
+    @if (errorMessage) {
+      <div class="auth--error">{{ errorMessage }}</div>
+    }
+
+    <form (ngSubmit)="onSubmit()" #loginForm="ngForm">
+      <mat-form-field appearance="outline" class="auth--field">
+        <mat-label>Username</mat-label>
+        <input matInput [(ngModel)]="username" name="username" required autocomplete="username" />
+      </mat-form-field>
+
+      <mat-form-field appearance="outline" class="auth--field">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" [(ngModel)]="password" name="password" required autocomplete="current-password" />
+      </mat-form-field>
+
+      <button mat-stroked-button type="submit" [disabled]="isLoading || !loginForm.valid">
+        @if (isLoading) {
+          <mat-spinner diameter="18"></mat-spinner>
+        } @else {
+          Sign In
+        }
+      </button>
+    </form>
+
+    <p class="auth--link">Don't have an account? <a routerLink="/register">Register</a></p>
+  </section>
+</main>
