@@ -1,5 +1,7 @@
 @use '@angular/material' as mat;
 
+// Import official prebuilt theme to initialize core styles, caret-colors, and interactions
+@import '@angular/material/prebuilt-themes/indigo-pink.css';
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
 @import url('https://fonts.googleapis.com/icon?family=Material+Icons');
 
@@ -14,4 +16,22 @@ html, body {
 
 * {
   box-sizing: inherit;
+}
+
+// Input caret-color override to ensure cursor visibility
+input, textarea {
+  caret-color: #212121 !important;
+}
+
+// Clickable cursor for all active elements and standard buttons
+button, [mat-button], [mat-stroked-button], [mat-flat-button], [mat-icon-button] {
+  cursor: pointer;
+  
+  &:disabled {
+    cursor: not-allowed !important;
+  }
+}
+
+a {
+  cursor: pointer;
 }
