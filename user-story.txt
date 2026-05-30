@@ -1,0 +1,21 @@
+Informal User Story: Simple Product Catalog & Inventory Management
+
+"As an Inventory Specialist at BallastLane, I need a secure, clean, and extremely simple 
+web dashboard where I can manage our company's product catalog without distractions.
+
+Specifically, I need to be able to:
+1. Register and log in securely so that unauthorized users cannot view, edit, or delete our 
+catalog data.
+2. See a listing of all products in a clean, uncluttered, and paginated table 
+(showing 10 products per page by default) so I can easily navigate through our inventory.
+3. Add new products to the catalog, update existing product details 
+(such as price and stock levels), and delete items that are out of stock or discontinued.
+4. Make sure everything is kept minimalist, ultra-fast, and responsive so I can manage 
+my work quickly from any device."
+
+---------------------------------------------------------
+Core Acceptance Criteria:
+- Secured routes via JWT authentication (only authenticated users can perform CRUD).
+- Server-side pagination with a default page size of 10 records.
+- Complete CRUD actions (Create, Read, Update, Delete) on products.
+- Minimalist, distraction-free user interface layout.

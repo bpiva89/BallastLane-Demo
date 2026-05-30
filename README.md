@@ -2,6 +2,9 @@
 
 Full-stack application built as part of the BallastLane technical interview exercise.
 
+The design and development of this system was driven by an informal user story, which can be found in the root directory:
+📄 **[user-story.txt](user-story.txt)** (Informal User Story & Acceptance Criteria).
+
 ## Stack
 
 | Layer | Technology |
@@ -29,6 +32,8 @@ BallastLane-Demo/
 ├── frontend/               # Angular application
 │   └── Dockerfile
 ├── Working App Screenshots/# Screenshots of the fully functional application
+├── Part 2 - Generative AI Tools.md # AI usage and prompt workflow documentation
+├── user-story.txt          # Informal User Story driving the project
 ├── docker-compose.yml
 └── README.md
 ```
