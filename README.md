@@ -22,12 +22,13 @@ The frontend follows a **minimalist design** intentionally — the goal of this 
 
 ```
 BallastLane-Demo/
-├── backend/         # .NET 8 Web API (Clean Architecture)
+├── backend/                # .NET 8 Web API (Clean Architecture)
 │   ├── src/
 │   ├── db/
 │   └── Dockerfile
-├── frontend/        # Angular application
+├── frontend/               # Angular application
 │   └── Dockerfile
+├── Working App Screenshots/# Screenshots of the fully functional application
 ├── docker-compose.yml
 └── README.md
 ```
@@ -58,6 +59,34 @@ Services:
 ```bash
 docker-compose down -v
 ```
+
+---
+
+## How to Access & Verify the Demo
+
+Once the application is running (either via Docker Compose or manually):
+
+1. **Open the Frontend**: Go to **`http://localhost:4200`** in your browser.
+2. **Register a User**: You will be redirected to the Login page. Click on **Register** (or go directly to `http://localhost:4200/register`).
+3. **Fill the Form**: Provide a username, email, and password (minimum 6 characters).
+4. **Explore the Dashboard**: Upon registering, you are logged in automatically and redirected to the **Products Dashboard** (`http://localhost:4200/products`).
+5. **View Seed Data**: You will instantly see the **5 default products** pre-loaded from the database seed script:
+   - *Wireless Mechanical Keyboard*
+   - *Ergonomic Wireless Mouse*
+   - *UltraWide Curved Monitor*
+   - *Noise-Cancelling Headphones*
+   - *USB-C Dual HDMI Docking Station*
+6. **Test Features**:
+   - Use the Material **paginator** at the bottom of the table to navigate pages.
+   - Perform full **CRUD** operations by creating, editing, and deleting products.
+
+## Working App Screenshots
+
+You can find screenshots of the fully functional application in the **`Working App Screenshots/`** directory. These images showcase:
+- **User Authentication**: Secure Login and Registration forms with active, real-time input validations.
+- **Products Dashboard**: Minimalist Material table presenting the 5 seeded products.
+- **Paging & Navigation**: Fully functional pagination controls working directly with the backend database offsets.
+- **Product Operations**: Interactive modals for creating, updating, and deleting products.
 
 ---
 
