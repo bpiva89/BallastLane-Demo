@@ -1,0 +1,8 @@
+**/.vs/
+**/bin/
+**/obj/
+**/out/
+**/logs/
+.git/
+.gitignore
+.dockerignore
