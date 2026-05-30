@@ -95,6 +95,18 @@ dotnet test src/BallastLane.ProductManagement.sln
 
 ---
 
+## Part 2: Generative AI Tools
+
+The required documentation and workflow review for **Part 2: Generative AI Tools** can be found in the root of this workspace:
+📄 **[Part 2 - Generative AI Tools.md](Part%202%20-%20Generative%20AI%20Tools.md)**
+
+This document details:
+- **Prompt Engineering**: The precise, structure-driven prompts used to scaffold clean, domain-driven architectures.
+- **Architectural Control & Validation**: Iterative adjustments (such as maintaining absolute POCO purity in Domain entities by disabling NHibernate lazy-load proxies via mapping).
+- **Edge-Case Resolution**: Resolving cross-platform/Linux container SQL Server driver incompatibilities (`MicrosoftDataSqlClientDriver` migration).
+
+---
+
 ## API Overview
 
 See `backend/README.md` for full endpoint documentation.
