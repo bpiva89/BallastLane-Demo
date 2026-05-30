@@ -14,6 +14,14 @@ namespace BallastLane.ProductManagement.Domain.Interfaces
         public Task<IList<Product>> GetAllAsync();
 
         /// <summary>
+        /// Get a paged list of products.
+        /// </summary>
+        /// <param name="pageNumber"></param>
+        /// <param name="pageSize"></param>
+        /// <returns></returns>
+        public Task<(IList<Product> Items, int TotalCount)> GetPagedAsync(int pageNumber, int pageSize);
+
+        /// <summary>
         /// Get product by Id.
         /// </summary>
         /// <param name="id"></param>
