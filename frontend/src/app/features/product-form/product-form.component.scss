@@ -1,0 +1,10 @@
+.product-form {
+  display: flex;
+  flex-direction: column;
+  padding-top: 8px;
+
+  &--field {
+    width: 100%;
+    margin-bottom: 4px;
+  }
+}
