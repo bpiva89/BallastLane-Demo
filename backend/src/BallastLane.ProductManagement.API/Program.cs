@@ -28,7 +28,9 @@ var services = builder.Services;
 // NHibernate
 var connectionString = configuration.GetConnectionString("DefaultConnection")!;
 var sessionFactory = Fluently.Configure()
-    .Database(MsSqlConfiguration.MsSql2012.ConnectionString(connectionString))
+    .Database(MsSqlConfiguration.MsSql2012
+        .ConnectionString(connectionString)
+        .Driver<NHibernate.Driver.MicrosoftDataSqlClientDriver>())
     .Mappings(m => m.FluentMappings.AddFromAssembly(Assembly.GetAssembly(typeof(ProductMap))))
     .BuildSessionFactory();
 
